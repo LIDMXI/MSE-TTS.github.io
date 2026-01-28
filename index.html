@@ -22,13 +22,7 @@
 
     <section class="main-content">
       <h1 id="abstract">Abstract</h1>
-      <p>Vision-Driven Text-to-Speech aims to generate style-
-        matched speech based on input reference images. Although
-        existing methods can leverage facial images to control speech
-        style, they struggle to fully capture the multi-scale characteristics
-        of facial expressions as well as the fine-grained interactions
-        between emotional features and textual content. To address
-        this challenge, we propose a novel multimodal speech synthesis
+      <p>Vision-Driven Text-to-Speech aims to generate style-matched speech based on input reference images. Although existing methods can leverage facial images to control speech style, they struggle to fully capture the multi-scale characteristics of facial expressions as well as the fine-grained interactions between emotional features and textual content. To address this challenge, we propose a novel multimodal speech synthesis
         framework, MSE-TTS. First, we design a Multi-Scale Vision
         Emotion Encoder to capture richer emotional details. A dual-
         supervision strategy combining classification and contrastive
@@ -40,65 +34,6 @@
         in both naturalness and emotional expressiveness of synthesized
         speech. </p>
       
-
-      <h2 id="speech-based-emotion-control">Emotion Controlling Based On Speech Prompt</h2>
-      <h4 id="note">( Note that: in the 'Ours w/o MPEE', we replaced the proposed MPEE  with the AMPE of MM-TTS.) </h4>
-      <table>
-        <thead>
-          <tr>
-            <th><center> Speech Prompt </center></th>
-            <th><center> Text </center></th>
-            <th><center> GenerSpeech </center></th>
-            <th><center> Meta-StyleSpeech </center></th>
-            <th><center> MM-TTS </center></th>
-            <th><center> Ours w/o MPEE </center></th>
-            <th><center> Ours w/o ECL </center></th>
-            <th><center> Ours </center></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><audio src="samples/speech-based/0/Ref.wav" controls="" preload=""></audio></td>
-            <td>don't ask me to carry an oily rag like that.</td>
-            <td><audio src="samples/speech-based/0/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td><audio src="samples/speech-based/1/Ref.wav" controls="" preload=""></audio></td>
-            <td>she had your dark suit in greasy wash water all year.</td>
-            <td><audio src="samples/speech-based/1/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td><audio src="samples/speech-based/2/Ref.wav" controls="" preload=""></audio></td>
-            <td>he ate four extra eggs for breakfast.</td>
-            <td><audio src="samples/speech-based/2/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td><audio src="samples/speech-based/3/Ref.wav" controls="" preload=""></audio></td>
-            <td>it was not whatever tale was told by tails.</td>
-            <td><audio src="samples/speech-based/3/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-        </tbody>
-      </table>
 
       <h2 id="image-based-emotion-control">Emotion Controlling Based On Image Prompt</h2>
 
@@ -150,54 +85,7 @@
         </tbody>
       </table>
 
-      <h2 id="text-based-emotion-control">Emotion Controlling Based On Text Prompt</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th><center> Text Prompt </center></th>
-            <th><center> Text </center></th>
-            <th><center> MM-TTS </center></th>
-            <th><center> Ours w/o MPEE </center></th>
-            <th><center> Ours w/o ECL </center></th>
-            <th><center> Ours </center></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>A man talks in a tone of happiness.</td>
-            <td>are your grades higher or lower than nancy's.</td>
-            <td><audio src="samples/text-based/0/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/0/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/0/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/0/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td>A man voices with a pitch of intense gloom.</td>
-            <td>she had your dark suit in greasy wash water all year.</td>
-            <td><audio src="samples/text-based/1/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/1/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/1/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/1/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td>A woman speaks with a tone of extreme anger.</td>
-            <td>no price is too high when true love is at stake.</td>
-            <td><audio src="samples/text-based/2/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/2/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/2/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/2/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td>A man voices with a slight hint of annoyance.</td>
-            <td>why do we need bigger and better bombs?</td>
-            <td><audio src="samples/text-based/3/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/3/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/3/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/3/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-        </tbody>
-      </table>
+     
 
       <footer class="site-footer">
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
