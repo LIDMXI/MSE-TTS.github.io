@@ -22,7 +22,23 @@
 
     <section class="main-content">
       <h1 id="abstract">Abstract</h1>
-      <p>Zero-Shot Text-To-Speech(TTS) has become a more challenging speech generation task, but current TTS systems lack flexible generation over emotional information. This paper proposes a customized emotion Zero-Shot TTS system based on multi-modal prompt. The system extracts the emotion information from the arbitrary modal prompt(text, image or speech) and models the content, timbre, emotion and prosody separately. Firstly, we propose a multi-modal prompt emotion encoder based on the pretrained Emotion2Vec to extract the emotion information from the prompts. Then, we introduce a prosody predictor based on autoregressive(AR) transformer to fit the distribution of prosody and propose the emotion consistency loss(ECL) to retain emotion information in the predicted prosody. Finally, we introduce the diffusion-based acoustic model to generate target mel-spectrogram. The subjective and objective experiments show that our system outperforms similar systems in naturalness and similarity, and achieves more flexible emotion and timbre customization.</p>
+      <p>Vision-Driven Text-to-Speech aims to generate style-
+        matched speech based on input reference images. Although
+        existing methods can leverage facial images to control speech
+        style, they struggle to fully capture the multi-scale characteristics
+        of facial expressions as well as the fine-grained interactions
+        between emotional features and textual content. To address
+        this challenge, we propose a novel multimodal speech synthesis
+        framework, MSE-TTS. First, we design a Multi-Scale Vision
+        Emotion Encoder to capture richer emotional details. A dual-
+        supervision strategy combining classification and contrastive
+        losses is introduced to enhance feature discriminative power. Sec-
+        ond, we introduce an Emotion-Text Fusion Module that employs
+        abidirectional attention mechanism to achieve deep interaction
+        between emotion vectors and text sequences. Experimental results
+        demonstrate that MSE-TTS outperforms existing baseline models
+        in both naturalness and emotional expressiveness of synthesized
+        speech. </p>
       
 
       <h2 id="speech-based-emotion-control">Emotion Controlling Based On Speech Prompt</h2>
