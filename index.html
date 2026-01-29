@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>MSE-TTS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">MSE-TTS: Emotion-Controllable Text-to-Speech via Multi-Scale Vision Feature</h1>
+      <a href="#" class="btn">Paper</a>
+      <a href="#" class="btn">Project</a>
+      <!-- <a href="#" class="btn">Download .zip</a>
+      <a href="#" class="btn">Download .tar.gz</a> -->
+    </section>
+
+
+
+    <section class="main-content">
+      <h1 id="abstract">Abstract</h1>
+      <p>Vision-Driven Text-to-Speech aims to generate style-matched speech based on input reference images. Although existing methods can leverage facial images to control speech style, they struggle to fully capture the multi-scale characteristics of facial expressions as well as the fine-grained interactions between emotional features and textual content. To address this challenge, we propose a novel multimodal speech synthesis framework, MSE-TTS. First, we design a Multi-Scale Vision Emotion Encoder to capture richer emotional details. A dual- supervision strategy combining classification and contrastive losses is introduced to enhance feature discriminative power. Sec- ond, we introduce an Emotion-Text Fusion Module that employs abidirectional attention mechanism to achieve deep interaction between emotion vectors and text sequences. Experimental results demonstrate that MSE-TTS outperforms existing baseline models in both naturalness and emotional expressiveness of synthesized speech. </p>
+      
+
+      <h2 id="image-based-emotion-control">Emotion Controlling Based On Image Prompt</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th><center> Image Prompt </center></th>
+            <th><center> Text </center></th>
+            <th><center> GT </center></th>
+            <th><center> VITS </center></th>
+            <th><center> Facetts </center></th>
+            <th><center> Facespeak </center></th>
+            <th><center> Ours </center></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="samples1/simples_1/1.jpg" alt="" /></td>
+            <td>Only lawyers love millionaires.</td>
+            <td><audio src="samples1/simples_1/0gt_M005_contempt_level_3_006.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_1/1vits.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_1/2facetts.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_1/3facespeak.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_1/4ours.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td><img src="samples1/simples_2/2.jpg" alt="" /></td>
+            <td>The small boy put the worm on the hook.</td>
+            <td><audio src="samples1/simples_2/0gt_M005_disgusted_level_3_002.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_2/1vits.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_2/2facetts.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_2/3facespeak.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_2/4ours.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td><img src="samples1/simples_3/3.jpg" alt="" /></td>
+            <td>His superiors had also preached this saying it was the way for eternal honor.</td>
+            <td><audio src="samples1/simples_3/0gt_M037_neutral_level_1_070.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_3/1vits.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_3/2facetts.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_3/3facespeak.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_3/4ours.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+           <td><img src="samples1/simples_4/4.jpg" alt="" /></td>
+            <td>Grandmother outgrew her upbringing in petticoats.</td>
+            <td><audio src="samples1/simples_4/0gt_W011_surprised_level_3_015.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_4/1vits.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_4/2facetts.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_4/3facespeak.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_4/4ours.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+           <td><img src="samples1/simples_5/5.jpg" alt="" /></td>
+            <td>Kindergarten children decorate their classrooms for all holidays.</td>
+            <td><audio src="samples1/simples_5/0gt_W033_angry_level_3_026.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_5/1vits.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_5/2facetts.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_5/3facespeak.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_5/4ours.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+           <td><img src="samples1/simples_6/6.jpg" alt="" /></td>
+            <td>Call an ambulance for medical assistance.</td>
+            <td><audio src="samples1/simples_6/0gt_M035_neutral_level_1_023.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_6/1vits.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_6/2facetts.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_6/3facespeak.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_6/4ours.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+           <td><img src="samples1/simples_7/7.jpg" alt="" /></td>
+            <td>The eastern coast is a place for pure pleasure and excitement.</td>
+            <td><audio src="samples1/simples_7/0gt_M039_neutral_level_1_057.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_7/1vits.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_7/2facetts.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_7/3facespeak.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples1/simples_7/4ours.wav" controls="" preload=""></audio></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+     
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+
+    </section>
+
+  </body>
+</html>
